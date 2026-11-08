@@ -45,7 +45,7 @@ function App() {
       <main>
         <form onSubmit={addTodo}>
           <div id='todo-container'>
-            <h2 id='todo-list-header'>To-Do List</h2>
+            <h2 id='todo-list-header'>오늘의 할 일</h2>
             <div id='todo-input-group'>
               <input 
                 type="text" 
@@ -54,7 +54,7 @@ function App() {
                 placeholder='Type something...' 
                 maxLength={100}
               />
-              <button type="submit" id='submit_button'>Add</button>
+              <button type="submit" id='submit_button'>추가</button>
             </div>
           </div>
         </form>
