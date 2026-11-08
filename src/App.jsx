@@ -56,9 +56,15 @@ function App() {
               />
               <button type="submit" id='submit_button'>추가</button>
             </div>
+            <p style={{ color: '#a9b4c2', textAlign: 'center', marginTop: '8px' }}>{inputText.length}/100자</p>
           </div>
         </form>
         <ul id='todo-list'>
+          {todos.length === 0 && (
+            <li style={{ listStyle: 'none', color: '#a9b4c2', textAlign: 'center' }}>
+              아직 할 일이 없어요. 하나 추가해 보세요!
+            </li>
+          )}
           {todos?.map((todo, id) => {
             return <Todo key={id} id={id} todo={todo} onDelete={deleteTodo} onToggle={toggleTodo} />
           })}
